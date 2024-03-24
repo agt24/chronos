@@ -1,5 +1,5 @@
 from raspbian/systemd:latest
-
+RUN echo "deb http://legacy.raspbian.org/raspbian stretch main contrib non-free rpi" > /etc/apt/sources.list
 workdir /home/chronos
 run apt-get update -y && apt-get install python2.7 python-pip cron sqlite3 nginx libssl-dev vim -y
 run useradd pi
